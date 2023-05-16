@@ -13,6 +13,10 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
+    public int getPublishingYear() {
+        return publishingYear;
+    }
+
     public String getBookName() {
         return bookName;
     }
@@ -38,7 +42,11 @@ public class Book {
         return publishingYear == book.publishingYear && Objects.equals(bookName, book.bookName) && Objects.equals(author, book.author);
     }
     public int hashCode (){
-        return 0;
+        int result = getBookName() != null ? getBookName().hashCode() : 0;
+        result = 31 * result + (getAuthor() != null ? getAuthor().hashCode() : 0);
+        result = 31 * result + getPublishingYear();
+        return result;
+
     }
 
 }

@@ -36,7 +36,8 @@ public class Author {
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lasName);
-    }
-}
+        int result = getFirstName() != null ? getFirstName().hashCode() : 0;
+        result = 31 * result + (getLasName() != null ? getLasName().hashCode() : 0);
+        return result;
+}}
 

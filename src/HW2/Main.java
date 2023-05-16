@@ -17,6 +17,8 @@ public class Main {
         System.out.println(warAndPis.equals(evgenOneg) );
         System.out.println(warAndPis.equals(warAndPis2));
         System.out.println(warAndPis.hashCode());
+        System.out.println(warAndPis2.hashCode());
+        System.out.println(pushkin.hashCode());
         System.out.println(pushkin.hashCode());
 
 
